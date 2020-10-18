@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom')
 
 const BlueContent = (props) => {
   return (
-    <div className='react-component-blue-content' style={{ color: 'blue' }}>
+    <div style={{ color: 'blue' }}>
       {props.children}
     </div>
   )
@@ -11,10 +11,9 @@ const BlueContent = (props) => {
 
 if (typeof window === 'undefined') {
 } else {
-  const componentContainers = document.querySelectorAll('.react-component-blue-content')
+  const componentContainers = document.querySelectorAll('.react-component-bluecontent')
 
-  for (const index of componentContainers) {
-    const componentContainer = componentContainers[index]
+  for (const componentContainer of componentContainers) {
     ReactDOM.hydrate(React.createElement(BlueContent), componentContainer)
   }
 }

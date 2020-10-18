@@ -48,8 +48,7 @@ if (typeof window === 'undefined') {
 } else {
   const componentContainers = document.querySelectorAll('.react-component-timer')
 
-  for (const index of componentContainers) {
-    const componentContainer = componentContainers[index]
+  for (const componentContainer of componentContainers) {
     ReactDOM.hydrate(React.createElement(Timer), componentContainer)
   }
 }

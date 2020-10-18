@@ -13,8 +13,23 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
+        include: [
+          path.resolve(__dirname, 'react')
+        ],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
+          }
+        }
+      },
+      {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules|bower_components|react)/,
         use: {
           loader: 'babel-loader',
           options: {
