@@ -5,6 +5,7 @@ const BlueContent = (props) => {
   return (
     <div style={{ color: 'blue' }}>
       {props.children}
+      {props.extra}
     </div>
   )
 }

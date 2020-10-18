@@ -18,7 +18,7 @@ A repository owned by a user account has two permission levels: the *repository 
 
 ### Organization accounts
 <!--react-->
-<BlueContent>
+<BlueContent extra="hello">
 
 Hello world!
 
