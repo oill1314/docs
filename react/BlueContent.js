@@ -14,7 +14,7 @@ if (typeof window === 'undefined') {
   const componentContainers = document.querySelectorAll('.react-component-bluecontent')
 
   for (const componentContainer of componentContainers) {
-    ReactDOM.hydrate(React.createElement(BlueContent, {}, componentContainer.children), componentContainer)
+    ReactDOM.render(React.createElement(BlueContent, {}, componentContainer.children[0].innerHTML), componentContainer)
   }
 }
 

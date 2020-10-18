@@ -14,7 +14,7 @@ if (typeof window === 'undefined') {
   const componentContainers = document.querySelectorAll('.react-component-redcontent')
 
   for (const componentContainer of componentContainers) {
-    ReactDOM.hydrate(React.createElement(RedContent, {}, componentContainer.children), componentContainer)
+    ReactDOM.render(React.createElement(RedContent, {}, componentContainer.children[0].innerHTML), componentContainer)
   }
 }
 
